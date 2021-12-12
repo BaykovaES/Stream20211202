@@ -10,7 +10,7 @@ public class Lesson2HW {
 
         System.out.println(checkNumber(-25));
 
-        System.out.println(check(48));
+        System.out.println(check(20));
 
         textLine("Hello", 3);
 
@@ -38,12 +38,8 @@ public class Lesson2HW {
     }
 
     public static boolean check(int n) {
-        if (n <= 0) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return (n <= 0);
+
     }
     public static void textLine(String someTextLine, int quantity) {
         for (int i = 1; i <= quantity; i++) {
