@@ -4,46 +4,48 @@ import java.util.Random;
 public class Lesson3HW {
 
         public static void main(String[] agrs) {
-        invertArray();
-        System.out.println(" ");
-        fillArray();
-        System.out.println(" ");
-        changeArray();
-        System.out.println(" ");
-        fillDiagonal();
-        System.out.println(" ");
-        fillArray(5, 12);
-        System.out.println(" ");
+            invertArray();
+            System.out.println();
+            fillArray();
+            System.out.println();
+            changeArray();
+            System.out.println();
+            fillDiagonal();
+            System.out.println();
+            fillArray(5, 12);
+            System.out.println();
 
 
+        }
+
+        public static void printArray(int[] inputArray) {
+             for (int i = 0; i < inputArray.length; i++) {
+                 System.out.print(inputArray[i] + " ");
+             }
         }
 
         public static void invertArray() {
             int[] array = {1,1,1,0,1,0,0,1,0,1,0};
             for (int i = 0; i < array.length; i++) {
-                if (array [i] == 0) {
-                array[i] = 1;
+                if (array[i] == 0) {
+                    array[i] = 1;
+                } else {
+                    array[i] = 0;
                 }
-                 else {
-                     array[i] = 0;
-                }
-
-             }
-             for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-             }
+            }
+            printArray (array);
 
         }
+
         public static void fillArray() {
              int[] arr = new int[100];
              for (int i = 0; i < arr.length; i++) {
                 arr[i] = (i + 1);
              }
-             for (int i = 0; i < arr.length; i++) {
-                System.out.print(arr[i] + " ");
-             }
+            printArray (arr);
 
         }
+
         public static void changeArray() {
              int[] arr = { 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1 };
              for (int i = 0; i < arr.length; i++) {
@@ -51,10 +53,9 @@ public class Lesson3HW {
                      arr[i] = (arr[i] * 2);
                  }
              }
-            for (int i = 0; i < arr.length; i++) {
-                System.out.print(arr[i] + " ");
-            }
+            printArray (arr);
         }
+
         public static void fillDiagonal() {
              int[][] arr = new int[9][9];
              for (int i = 0; i < arr.length; i++) {
@@ -73,14 +74,13 @@ public class Lesson3HW {
 
              }
         }
+
         public static void fillArray(int len, int initialValue) {
             int[] arr = new int[len] ;
             for (int i = 0; i < arr.length; i++) {
                 arr[i] = (initialValue);
             }
-            for (int i = 0; i < arr.length; i++) {
-                System.out.print(arr[i] + " ");
-            }
+            printArray (arr);
         }
 
 
