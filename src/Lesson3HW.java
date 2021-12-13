@@ -15,7 +15,6 @@ public class Lesson3HW {
             fillArray(5, 12);
             System.out.println();
 
-
         }
 
         public static void printArray(int[] inputArray) {
